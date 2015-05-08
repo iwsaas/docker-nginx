@@ -5,8 +5,8 @@ MAINTAINER Henry Huang <henry.s.huang@gmail.com>
 ADD nginx.repo /etc/yum.repos.d/nginx.repo
 
 # Install base stuff.
-RUN yum -y update; yum clean all
 RUN yum -y install ca-certificates; yum clean all
+RUN yum -y update; yum clean all
 RUN yum -y install nginx; yum clean all
 
 # forward request logs to docker log collector
